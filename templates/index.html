@@ -3,15 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}"
+    />
+
     <title>Wolfsonian Visualization</title>
   </head>
   <body>
-    <h1>Flask + Dash Integration</h1>
-    <iframe
-      src="{{ url_for('dash_redirect') }}"
-      width="100%"
-      height="600px"
-      style="border: none"
-    ></iframe>
+    <section class="landing-section">
+      <div class="landing-text">
+        <h1>Exploring The Wolfsonian</h1>
+        <h2>Through everything you can and can't see</h2>
+      </div>
+    </section>
+    <section>
+      <iframe
+        src="{{ url_for('genre_bar_redirect') }}"
+        width="100%"
+        height="500px"
+        style="border: none"
+      ></iframe>
+
+      <iframe
+        src="{{ url_for('class_bar_redirect') }}"
+        width="100%"
+        height="500px"
+        style="border: none"
+      ></iframe>
+
+      <iframe
+        src="{{ url_for('heatmap_redirect') }}"
+        width="100%"
+        height="500px"
+        style="border: none"
+      ></iframe>
+    </section>
   </body>
 </html>
